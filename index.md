@@ -10,7 +10,7 @@ layout: default
 
 Carlsbad, CA
 
-ghassandmour@gmail.com   | +1 (442) 375 - 7990
+ghassandmour@gmail.com | +1 (442) 375 - 7990
 
 [Linkedin](https://www.linkedin.com/in/ghassan-al-dmour-97b096315/).
 
