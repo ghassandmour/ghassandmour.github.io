@@ -2,11 +2,18 @@
 layout: default
 ---
 
+
+
 # How I Created My E-Portfolio
 
 
 ## Introduction
 This guide explains how I created my personal e-portfolio using GitHub Pages and the Minimal theme.
+
+##  Prerequisites
+
+- A GitHub account
+- VSCode installed
 
 ## Step 1 — Creating My GitHub Repository
 I created a repository named `<myusername>.github.io` on GitHub.  
@@ -16,6 +23,8 @@ This name is special because it hosts my personal website automatically.
 I went to [Minimal Theme](https://github.com/pages-themes/minimal) and clicked **Code → Download ZIP**.
 
 Then I unzipped it and moved all the files into my cloned repository folder on my computer.
+
+I also read the "README" to understand how to use and customize it
 
 
 ## Step 3 — Replacing the Logo and Adding My Info
@@ -45,3 +54,4 @@ and once you are done you can commit and push again.
 
 
 
+https://pages-themes.github.io/minimal/ to review
