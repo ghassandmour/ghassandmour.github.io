@@ -46,7 +46,8 @@ Final Result
 
 Here’s a screenshot of my final e-portfolio:
 
-![Final Result](assets/img/Final_result.png)
+![Final Result](Final_result.png)
+
 
 ## Editing 
 Now after you can see how it looks like you can make any changes you want, 
