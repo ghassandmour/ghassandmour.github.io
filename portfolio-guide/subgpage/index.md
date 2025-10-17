@@ -51,7 +51,3 @@ Here’s a screenshot of my final e-portfolio:
 ## Editing 
 Now after you can see how it looks like you can make any changes you want, 
 and once you are done you can commit and push again.
-
-
-
-https://pages-themes.github.io/minimal/ to review
