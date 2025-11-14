@@ -5,93 +5,66 @@ permalink: /om620-milestone3/
 ---
 # Tools and Technologies for Analytics — OM 620
 
+This repository presents my work for OM 620: Tools and Technologies for Analytics, a course in the MS in Supply Chain Analytics program at CSUSM. It includes the combined notebook for 2 assignments, an organized folder structure (data/ and notebooks/), and a summary of the business problem I addressed during the course.
 
-This repository contains my work for the OM 620 course Tools and Technologies for Analytics, taken as part of the MS in Supply Chain Analytics program at CSUSM. The purpose of this repo is to organize the course assignments, document my analytical approach, and present the insights gathered so far. The repository includes a combined notebook for Milestones 1 and 2, a structured folder layout (data/ and notebooks/), and this README summarizing the core business problem and findings.
+## Business Problem
 
-## Business Problem Overview
+This project focused on determining appropriate safety stock levels for a group of SKUs using a substantial set of historical transaction data. I evaluated two distinct methods:
 
-Throughout this assignment, the objective was to help a company determine appropriate safety stock levels for a set of SKUs using a large historical transaction dataset. The task involved computing safety stock using two different methodologies:
+* A calculation based on a normal distribution
+* An approach that uses empirical quantiles from the actual demand pattern
 
-A calculation that assumes demand follows a normal distribution
+The aim was not just to compute values, but to understand which method better reflects how demand behaves in practice.
 
-A calculation using empirical quantiles derived directly from the data
+# Data Overview
 
-The goal was to compare both approaches and assess which method more realistically reflects actual demand behavior.
+The dataset includes more than 400,000 transaction records and nearly 500 SKUs. The fields are: sku_number
 
-## Data Description
+* inventory_type
+* stocking_type
+* lead_time
+* unit_price
+* manufacturing_site
+* division_code
+* transaction_date
+* order_quantity
 
-The dataset provided consisted of detailed transactional records with fields such as:
+Before running any analysis, I spent time cleaning the data and ensuring everything was in order. This included fixing inconsistent types, removing irrelevant or non-stocked items, and verifying the accuracy of date and quantity fields.
 
-sku_number
+# Initial Exploration
 
-inventory_type
+To focus on items that actually drive inventory decisions, I filtered the dataset to “make to stock” finished goods. From there, I looked at a few basic characteristics:
 
-stocking_type
+* How many SKUs remained after filtering
+* How many manufacturing sites were represented
+* How many divisions appeared in the data
 
-lead_time
+These checks confirmed that the filtered subset still captured a meaningful sample of stocked items.
 
-unit_price
+## Safety Stock Methods
 
-manufacturing_site
+### 1. Normal Distribution Method
 
-division_code
+This method uses the standard formula:
 
-transaction_date
+Safety Stock = Z × (Std Dev of Order Qty) × √(Average Lead Time)
 
-order_quantity
+I calculated safety stock at three service levels: 75%, 90%, and 95%. This provided a range of recommendations depending on how much risk the company is willing to take.
 
-After initial inspection, the dataset contained over 400,000 transaction rows spanning nearly 500 SKUs. Before analysis, several cleaning steps were required, including:
+### 2. Empirical Quantile Method
 
-Ensuring consistent formatting of data types
-
-Addressing missing or inconsistent values
-
-Filtering out irrelevant or non-stocked items
-
-Verifying date and quantity fields for anomalies
-
-## Exploratory Data Review
-
-To prepare for safety stock calculations, I narrowed the dataset to items that are actually intended to be stocked. This included filtering based on criteria such as “make to stock” and “finished goods”.
-
-Some basic exploratory questions helped frame the scope:
-
-How many SKUs are included after filtering?
-→ A reduced but meaningful set of stocked SKUs remained for analysis.
-
-How diverse are the manufacturing locations?
-→ Multiple sites were represented, illustrating varied production sources.
-
-How many divisions are included?
-→ A number of unique divisions operated within the dataset.
-
-These checks ensured the dataset was ready for statistical evaluation.
-
-## Safety Stock Calculations
-
-### 1. Normal Distribution Approach
-
-The first method assumes order quantities are normally distributed. The formula used was:
-
-Safety Stock = Z * (Std Dev of Order Qty) * sqrt(Average Lead Time)
-
-
-Service level coefficients (Z-values) of 75%, 90%, and 95% were applied to generate safety stock recommendations under different risk tolerances.
-
-### 2. Empirical Quantile Approach
-
-The second method used quantiles from the actual distribution of order quantities. The formula applied was:
+The second method uses what the demand data actually looks like:
 
 Safety Stock = Quantile(order quantity at service level) – Average Order Quantity
 
+Since this approach doesn’t assume a particular distribution, it tends to reveal patterns that a normal distribution can obscure.
 
-This method relies entirely on observed behavior rather than assuming normality.
+## Key Findings
 
-## Comparison & Key Takeaways
+The two methods produced noticeably different values for many SKUs. In several cases, the normal distribution method suggested significantly higher safety stock, especially where demand was skewed or irregular.
 
-Both methods produced safety stock suggestions, but their results differed noticeably for many SKUs. In several cases, the normal distribution approach recommended higher safety stock, especially when the data showed irregular or skewed demand patterns.
+The empirical method lined up more closely with real-world expectations. Many SKUs in the dataset had lumpy or non-normal demand, and the quantile-based approach captured that behavior more accurately.
 
-The empirical quantile method tended to produce values that aligned more closely with real-world expectations, particularly for SKUs with sporadic or non-normal demand patterns—which is common in practice.
+Recommendation
 
-Recommendation:
-Based on the characteristics of the dataset, the empirical approach appears more reliable for this scenario. Real demand rarely fits neatly into a normal distribution, so using quantiles may produce more grounded and actionable safety stock guidelines.
+For this dataset, the empirical method is the better fit. Demand for many items doesn’t follow a normal curve, and using quantiles leads to safety stock levels that are more closely aligned with what actually occurs in operations.
