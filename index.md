@@ -73,4 +73,6 @@ reading, writing)
 ## Projects
 
 - [How I Created My E-Portfolio](/projects/subgpage/index.md)
-- [OM 620 Project Page](/om620-milestone3.md)
+- [OM620 GitHub Repository](https://github.com/ghassandmour/OM620-ASSIGNMENTS)
+
+
