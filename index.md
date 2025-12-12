@@ -74,7 +74,7 @@ reading, writing)
 ## Projects
 
 - [E-Portfolio](/projects/subpage/e-portfolio.html)  
-- [OM620 GitHub Repository](https://github.com/ghassandmour/OM620-ASSIGNMENTS)
+- [OM 620 – Tools & Tech for Analytics](/projects/om620-assignments/)
 - [OM 621 – Transportation Cost Estimation & Forecasting](/projects/om621-assignments/)
 
 
