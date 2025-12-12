@@ -74,6 +74,6 @@ reading, writing)
 
 - [How I Created My E-Portfolio](/projects/subgpage/index.md)
 - [OM620 GitHub Repository](https://github.com/ghassandmour/OM620-ASSIGNMENTS)
-- [OM 621 – Transportation Cost Estimation & Forecasting](/projects/subpage/om621.html)
+- [OM 621 – Transportation Cost Estimation & Forecasting](https://github.com/ghassandmour/OM-621-Assignments)
 
 
