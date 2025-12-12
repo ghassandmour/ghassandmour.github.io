@@ -9,7 +9,6 @@ permalink: /projects/om621-assignments/
 [View the repo on GitHub](https://github.com/ghassandmour/OM-621-Assignments)
 
 ## Video Overview
-<h2>Video</h2>
 
 <video width="100%" controls>
   <source src="/assets/video/om621.mp4" type="video/mp4">

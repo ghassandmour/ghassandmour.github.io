@@ -73,7 +73,7 @@ reading, writing)
 
 ## Projects
 
-- [E-Portfolio](/projects/subpage/e-portfolio.html)  
+- [E-Portfolio](/projects/e-portfolio/)
 - [OM 620 – Tools & Tech for Analytics](/projects/om620-assignments/)
 - [OM 621 – Transportation Cost Estimation & Forecasting](/projects/om621-assignments/)
 
