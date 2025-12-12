@@ -9,7 +9,13 @@ permalink: /projects/om621-assignments/
 [View the repo on GitHub](https://github.com/ghassandmour/OM-621-Assignments)
 
 ## Video Overview
-https://github.com/user-attachments/assets/c4cc938f-bea4-4e22-8563-8573f5cd7a5d
+<h2>Video</h2>
+
+<video width="100%" controls>
+  <source src="/assets/video/om621.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ## Project Overview
 This project contains Assignments completed for OM 621: Advanced Visual Analytics. The objective of the project is to analyze transportation invoice data to identify cost trends, shipment delays, and seasonal patterns across transportation modes, regions, and manufacturing sites. Using Python-based visual analytics and an interactive Power BI dashboard, the project supports transportation cost estimation and forecasting to improve budgeting and supply chain decision-making.
